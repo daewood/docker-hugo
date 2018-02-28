@@ -1,7 +1,7 @@
-publysher/hugo
+daewood/hugo
 ==============
 
-`publysher/hugo` is a [Docker](https://www.docker.io) base image for static sites generated with [Hugo](http://gohugo.io). 
+`daewood/hugo` is a [Docker](https://www.docker.io) base image for static sites generated with [Hugo](http://gohugo.io). 
 
 Images derived from this image can either run as a stand-alone server, or function as a volume image for your web server. 
 
@@ -23,7 +23,7 @@ The image is based on the following directory structure:
 
 In other words, your Hugo site resides in the `site` directory, and you have a simple Dockerfile:
 
-	FROM publysher/hugo 
+	FROM daewood/hugo 
 
 
 Building your site
