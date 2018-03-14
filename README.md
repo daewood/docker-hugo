@@ -25,6 +25,7 @@ In other words, your Hugo site resides in the `site` directory, and you have a s
 
 	FROM daewood/hugo 
 
+docker run -d -p 1313:1313 -v $PWD:/usr/share/blog daewood/hugo
 
 Building your site
 ------------------
