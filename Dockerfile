@@ -7,6 +7,7 @@ RUN apt-get -qq update \
 # Download and install hugo
 ENV HUGO_VERSION 0.37
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.deb
+ENV HUGO_SRC ./
 
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} /tmp/hugo.deb
@@ -26,4 +27,4 @@ ONBUILD RUN hugo -d /usr/share/nginx/html/
 
 # By default, serve site
 ENV HUGO_BASE_URL http://localhost:1313
-CMD hugo server -b ${HUGO_BASE_URL} --bind=0.0.0.0
+CMD hugo server -b ${HUGO_BASE_URL} -s $(HUGO_SRC) --bind=0.0.0.0
